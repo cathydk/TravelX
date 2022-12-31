@@ -31,17 +31,6 @@ function App() {
   const [ssn, setSsn] = useState();
 
   const [error,setError] = useState(undefined);
- 
-  
-    
-
-//  const toggleTheme = () => {
-//    if (theme === 'light') {
-//      setTheme('dark');
-//    } else {
-//      setTheme('light');
-//    }
-//  };
 
   useEffect(() => {
     document.body.className = theme;
@@ -101,13 +90,6 @@ function App() {
 
 
   function handleSubmit(event){
-    //let ssn = prompt("Please Enter SSN:");
-    //setSsn(ssn);
-    /*if (ssn == ""){
-      ssn = prompt("You Did Not Enter a SSN, Please Enter SSN:");
-      setSsn(ssn);
-    }
-    */
     let ssn = prompt( "Please enter a valid SSN")
     if(ssn != null && ssn !="" && ssn.length == 9){
       document.getElementById("ssn").innerHTML = "The SSN you entered was " + ssn + ".";    
@@ -121,31 +103,7 @@ function App() {
       listPerson(ssn);
       listFiles(ssn);
   }
-  event.preventDefault();
-    
-  
-  
-    
-   
-
-  //   let ssn;
-  //   while(ssn == null || ssn.length!=9){
-     
-  //     ssn = prompt( "Please enter a valid SSN")
-  //     setSsn(ssn);
-      
-  // }
-  
-  //   if (ssn != null){
-     
-  //     document.getElementById("ssn").innerHTML = "The SSN you entered was " + ssn + ".";
-
-  //   }
-  
-  //   event.preventDefault();
-  //   listPerson(ssn);
-  //   listFiles(ssn);
-    
+  event.preventDefault();   
   }
   
 
